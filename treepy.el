@@ -398,8 +398,6 @@ walk."
                                                                       ':changed? t))
                                          (treepy--meta loc)))
                 (child nil))
-            (while (setq child (and (treepy-branch-p nloc) (treepy-children nloc)))
-              (setq nloc (treepy-rightmost child)))
             nloc)
         (treepy--with-meta
          (cons (treepy-make-node loc (car pnodes) r)
